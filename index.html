@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="plantilla.css">
+</head>
+<input>
+    <header>Hola Mundo</header>
+    <p>ya está</p>
+    <div class="caja"></div>
+    <div class="caja"></div>
+    <div class="caja"></div>
+
+    <form method="post" id="myForm">
+        <ul>
+        
+        <li><input type="radio" name="color" value="red">Red</li>
+        <li><input type="radio" name="color" value="green">Green</li>
+        <li><input type="radio" name="color" value="blue">Blue</li>
+
+        </ul>
+    </form>    
+
+    <input name="textbox" type="text" size="25" maxlength="50" value="initial value">
+    <textarea rows="25" cols="15">initial value</textarea>
+    
+
+    <script>
+        
+
+        function encontrarSolucion(objetivo) {
+    
+            function encontrar(actual, historia) {
+                if (actual == objetivo) {
+                return historia;
+                } else if (actual > objetivo) {
+                return null;
+                    } else {
+                        return encontrar(actual + 5, `(${historia} + 5)`) ||
+                        encontrar(actual * 3, `(${historia} * 3)`);
+                        }
+                    }
+                    return encontrar(1, "1");
+                    
+                }
+        let n=34
+        document.querySelectorAll(".caja")[0].innerHTML=(`Encontrar Solución a ${n}`)
+        document.querySelectorAll(".caja")[2].innerHTML=(`${encontrarSolucion(n)}`)
+        console.log("pruebas")
+
+            let form = document.getElementById("myForm");
+            let colorFields = form.elements["color"];
+            console.log(colorFields.length); // 3
+            let firstColorField = colorFields[0];
+            let firstFormField = form.elements[0];
+            console.log(firstColorField === firstFormField);
+
+        function getSelectedText(cajadetexto){
+            return cajadetexto.value.substring(cajadetexto.selectionStart,
+            cajadetexto.selectionEnd);
+            }    
+
+        let textbox1 = document.forms[0].elements(`${"textbox"}`);
+        console.log(textbox1.value);
+        textbox1.value = "Some new value";
+
+
+        
+    </script>
+    
+</body>
+</html>
