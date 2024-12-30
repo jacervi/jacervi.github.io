@@ -15,22 +15,45 @@
     <script>
         // Crear y Eliminar Elementos del DOM
         // - Crear elementos
-        let newDiv = document.createElement("div");
-            newDiv.innerText = "LIBROS";
-            document.body.appendChild(newDiv);
+        //let newDiv = document.createElement("div");
+        //    newDiv.innerText = "LIBROS JavaScript";
+        //    document.body.appendChild(newDiv);
 
-        let listItems = document.querySelectorAll("ul.list > li");
-            console.log(listItems)
             
     </script>
+    
+    <h3>JAVASCRIPT</h3>
     <img src="vite.svg" alt="Imagen original">
+    <p>Libros Javascript</p>
     <ul id="ListaLibros">
         <li>El gran libro de HTML5, CSS3 y JavaScript Ed 3</li>
         <li>Eloquent_JavaScript</li>
         <li>javascript-handbook</li>
         <li>nodejs_web_development_fifth_edition</li>
     </ul>
+    <p>Cursos Javascript</p>
+    <ul id="Cursos">
+        <li><a href="https://web.dev/learn/javascript">WEB de Google</a></li>
+        <li><a href="https://www.youtube.com/watch?v=1glVfFxj8a4&t=12810">Mouredev</a></li>
+        <li><a href="https://www.youtube.com/watch?v=38Q8uw0rbOU&list=PLRM7PpbqqStK4JPmAGtEbTIC9xHU6sOeM">JAB</a></li>
+    </ul>
 
+    <p>Herramientas Javascript</p>
+    <form action="#">
+        <label for="lang">Lenguaje</label>
+        <select name="lenguajes" id="lang">
+          <option value="javascript">JavaScript</option>
+          <option value="php">PHP</option>
+          <option value="java">Java</option>
+          <option value="golang">Golang</option>
+          <option value="python">Python</option>
+          <option value="c#">C#</option>
+          <option value="C++">C++</option>
+          <option value="erlang">Erlang</option>
+        </select>
+        <input type="submit" value="Enviar" />
+  </form>
+  
 </body>
 
 </html>
