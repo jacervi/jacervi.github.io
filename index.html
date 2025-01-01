@@ -18,9 +18,9 @@
         //let0 newDiv = document.createElement("div");
         //   newDiv.innerText = "LIBROS JavaScript";
         //    document.body.appendChild(newDiv);
-        let boton = document.getElementById("searchInput")
-        console.log("input pulsado")
-        boton.addEventListener("click", seleccion)
+        let boton1 = document.getElementById("boton")
+        console.log("boton sin pulsar")
+        boton1.addEventListener("click", seleccion)
         
         function seleccion(){
             alert("Pulsación")
@@ -37,7 +37,8 @@
         <option value="javascript-handbook">javascript-handbook</option>
         <option value="nodejs_web_development_fifth_edition">nodejs_web_development_fifth_edition</option>
     </select>
-    <input type="submit" name="seleccionar" value="Seleccionar" />
+    <button id="boton"> Seleccionar</button>
+   
 
     <p>Cursos Javascript</p>
     <ul id="Cursos">
