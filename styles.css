@@ -6,7 +6,7 @@ body {
 
 h1 {
   text-align: center;
-  color: rgb(98, 255, 1);
+  color: rgb(1, 5, 255);
     transition-duration: 10ms;
 }
 
@@ -26,6 +26,10 @@ a {
   text-align: center;
   color: rgb(148, 251, 64);
     transition-duration: 10ms;
+}
+
+select {
+  text-align: left;
 }
 
 .main-div {

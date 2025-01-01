@@ -15,22 +15,30 @@
     <script>
         // Crear y Eliminar Elementos del DOM
         // - Crear elementos
-        //let newDiv = document.createElement("div");
-        //    newDiv.innerText = "LIBROS JavaScript";
+        //let0 newDiv = document.createElement("div");
+        //   newDiv.innerText = "LIBROS JavaScript";
         //    document.body.appendChild(newDiv);
-
-            
+        let boton = document.querySelect("form.action  input[name='seleccionar']")
+        console.log("input pulsado")
+        boton.addEventListener("click", seleccion)
+        
+        function seleccion(){
+            alert("Pulsación")
+        }
     </script>
     
     <h3>JAVASCRIPT</h3>
     <img src="vite.svg" alt="Imagen original">
     <p>Libros Javascript</p>
-    <ul id="ListaLibros">
-        <li>El gran libro de HTML5, CSS3 y JavaScript Ed 3</li>
-        <li>Eloquent_JavaScript</li>
-        <li>javascript-handbook</li>
-        <li>nodejs_web_development_fifth_edition</li>
-    </ul>
+    <label for="books"></label>
+    <select name="libros" id="books">
+        <option value="El gran libro de HTML5, CSS3 y JavaScript Ed 3">El gran libro de HTML5, CSS3 y JavaScript Ed 3</option>
+        <option value="Eloquent_JavaScript">Eloquent_JavaScript</option>
+        <option value="javascript-handbook">javascript-handbook</option>
+        <option value="nodejs_web_development_fifth_edition">nodejs_web_development_fifth_edition</option>
+    </select>
+    <input type="submit" name="seleccionar" value="Seleccionar" />
+
     <p>Cursos Javascript</p>
     <ul id="Cursos">
         <li><a href="https://web.dev/learn/javascript">WEB de Google</a></li>
@@ -38,9 +46,9 @@
         <li><a href="https://www.youtube.com/watch?v=38Q8uw0rbOU&list=PLRM7PpbqqStK4JPmAGtEbTIC9xHU6sOeM">JAB</a></li>
     </ul>
 
-    <p>Herramientas Javascript</p>
+    <p>Lenguajes</p>
     <form action="#">
-        <label for="lang">Lenguaje</label>
+        <label for="lang"></label>
         <select name="lenguajes" id="lang">
           <option value="javascript">JavaScript</option>
           <option value="php">PHP</option>
