@@ -12,30 +12,15 @@
 <img src="EscudoCervi.png" alt="Nada" width="48" height="58">
 <body>
     <video src="f4.mp4" autoplay="true" muted="true" loop="true" poster=""></video>
-    <script>
-        // Crear y Eliminar Elementos del DOM
-        // - Crear elementos
-        //let0 newDiv = document.createElement("div");
-        //   newDiv.innerText = "LIBROS JavaScript";
-        //    document.body.appendChild(newDiv);
-        let boton1 = document.getElementById("boton")
-        console.log("boton sin pulsar")
-        boton1.addEventListener("click", seleccion)
-        
-        function seleccion(){
-            alert("Pulsación")
-        }
-    </script>
-    
     <h3>JAVASCRIPT</h3>
     <img src="vite.svg" alt="Imagen original">
     <p>Libros Javascript</p>
     <label for="books"></label>
     <select name="libros" id="books">
-        <option value="El gran libro de HTML5, CSS3 y JavaScript Ed 3">El gran libro de HTML5, CSS3 y JavaScript Ed 3</option>
-        <option value="Eloquent_JavaScript">Eloquent_JavaScript</option>
-        <option value="javascript-handbook">javascript-handbook</option>
-        <option value="nodejs_web_development_fifth_edition">nodejs_web_development_fifth_edition</option>
+        <option value="El gran libro de HTML5, CSS3 y JavaScript Ed 3.pdf">El gran libro de HTML5, CSS3 y JavaScript Ed 3</option>
+        <option value="Eloquent_JavaScript.pdf">Eloquent_JavaScript</option>
+        <option value="javascript-handbook.pdf">javascript-handbook</option>
+        <option value="nodejs_web_development_fifth_edition.pdf">nodejs_web_development_fifth_edition</option>
     </select>
     <button id="boton"> Seleccionar</button>
    
@@ -64,5 +49,24 @@
   </form>
   
 </body>
+
+<script>
+    // Crear y Eliminar Elementos del DOM
+    // - Crear elementos
+    //let0 newDiv = document.createElement("div");
+    //   newDiv.innerText = "LIBROS JavaScript";
+    //    document.body.appendChild(newDiv);
+    let boton1 = document.querySelector("#boton")
+    console.log(boton1)
+    boton1.addEventListener("click", seleccion);
+    
+    function seleccion(){
+        selectLibro = document.getElementById("books")
+        alert(selectLibro.value)
+        libroSeleccionado = selectLibro.value
+        window.open(libroSeleccionado)
+        // alert(enlaceLibro)
+    }
+</script>
 
 </html>
