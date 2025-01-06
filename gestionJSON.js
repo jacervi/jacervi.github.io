@@ -1,6 +1,6 @@
 //Lectura de ficheros JSON
 function leeJSON() {
-  const fs = require("fs");
+  const fs = require(["fs"]);
   let data = fs.readFileSync("documentos.json");
   //console.log(data)
   let documento = JSON.parse(data);

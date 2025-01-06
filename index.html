@@ -72,7 +72,7 @@
     fetch('documentos.json')
     .then(response => response.json())
     .then(data => {let varSelect = 
-        document.querySelector('#libro1').textContent = (data.documentos[3].titulo)
+        document.querySelector('#libro1').textContent = (data.documentos[0].titulo)
         console.log(varSelect)
     })
     .catch(error => console.log(error));
