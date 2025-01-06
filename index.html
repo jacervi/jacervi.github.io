@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
     <link rel="stylesheet" href="styles.css">
+    <script src="require.js"></script>
 </head>
 <title>JACERVI</title>
 <h1>Página de José Antonio Cerviño</h1>
@@ -24,6 +25,7 @@
     </select>
     <button id="boton"> Seleccionar</button>
    
+    <h2 id="libro1">Esperando por datos</h2>
 
     <p>Cursos Javascript</p>
     <ul id="Cursos">
@@ -62,11 +64,29 @@
     
     function seleccion(){
         selectLibro = document.getElementById("books")
-        alert(selectLibro.value)
         libroSeleccionado = selectLibro.value
         window.open(libroSeleccionado)
-        // alert(enlaceLibro)
     }
+
+    //Seleccionar elementos del documento JSON usando petición GET
+    fetch('documentos.json')
+    .then(response => response.json())
+    .then(data => {let varSelect = 
+        document.querySelector('#libro1').textContent = (data.documentos[3].titulo)
+        console.log(varSelect)
+    })
+    .catch(error => console.log(error));
+
+
+    //Modificación de datos
+    //            variable = data
+    //            JSON.stringify(
+    //                variable.documentos[3].titulo = 'pruebas')
+    //                console.log(variable.documentos[3].titulo)
+    //        })
+    //        .catch(error => console.log(error));
+   
 </script>
+<script  src="gestionJSON.js"></script>
 
 </html>

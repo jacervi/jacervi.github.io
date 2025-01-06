@@ -1,0 +1,32 @@
+{
+    "documentos" : [
+    {
+        "tipo" : "libro",
+        "tema" : "Javascript",
+        "titulo": "Eloquent_JavaScript",
+        "formato" : "pdf"
+    
+    },
+    {
+        "tipo" : "libro",
+        "tema" : "Javascript",
+        "titulo": "javascript-handbook",
+        "formato" : "pdf"
+    
+    },
+    {
+        "tipo" : "libro",
+        "tema" : "Javascript",
+        "titulo": "nodejs_web_development_fifth_edition",
+        "formato" : "pdf"
+      
+    },
+    
+    {
+        "tipo" : "libro",
+        "tema" : "Javascript",
+        "titulo": "",
+        "formato" : "pdf"  
+    }
+    ]
+    }
